@@ -1,14 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import About from './pages/About';
 import bgImage from './assets/gallery_files/12.jpg'; 
-
-export default function App() {
+const Home = () => {
   return (
     <div 
       className="h-screen w-full flex flex-col items-center justify-center text-center bg-cover bg-center relative"
       style={{ backgroundImage: `url(${bgImage})` }} 
     >
       <div className="absolute inset-0 bg-black/60"></div>
-
-      <div className="relative z-10">
+      <div className="relative z-10 mt-10"> 
         <h1 className="text-6xl text-white font-pixel mb-4 drop-shadow-lg">
           IGNITIA
         </h1>
@@ -17,5 +18,19 @@ export default function App() {
         </h2>
       </div>
     </div>
-  )
+  );
+};
+
+export default function App() {
+  return (
+    <Router>
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<div className="h-screen bg-black text-white flex items-center justify-center font-pixel">LOGIN COMING SOON</div>} />
+      </Routes>
+    </Router>
+  );
 }
