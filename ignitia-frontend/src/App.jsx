@@ -6,12 +6,6 @@ import Gallery from './pages/Gallery';
 import Login from './pages/Login';     
 import bgImage from './assets/gallery_files/12.jpg'; 
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';      
-import About from './pages/About';
-import Gallery from './pages/Gallery';
-import Login from './pages/Login';
 
 export default function App() {
   return (
