@@ -1,4 +1,4 @@
-import bgImage from './assets/bg.jpg';
+import bgImage from './assets/12.png'; // Change this to your real file name
 
 export default function App() {
   return (
